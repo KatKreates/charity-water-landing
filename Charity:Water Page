@@ -17,7 +17,6 @@
       box-sizing: border-box;
     }
     header {
-      <h2>"1 in 10 people are without clean water"</h2>
       background: url("https://cdn2.dropmarkusercontent.com/52043/8cb1ff9d4927ebc0544db0f7a34bedb8104bf1257bedd8d94d3f4e45cbdc03a2/Madagascar_2019_CG-0318.jpg?Expires=1749873039&Signature=LSKetVy-tNtBhc7a2Vbm-L1f~Syba5SDI-POvl7T05~7laURQTN8Sb9xu-NbEhiDDwbb8syr8YlfbkNNce6dXSE2Tf9DAQwDwRgg-eVaZPXn3iW4OSMsI52LQ7GaBdGUcwDB~Uf~Ry157hZFOIQn9NMqKyZGHqoHIIZNI0gpylQPaKVzxrTkg1Vr-uO1tM7KOotECOkaRMiFo857l7G6VVSUbf9-5p0PS5X0QS5qQ0Msu6AgyZd2fGa1xXudXfHyy8HK-CGkGauiW~wSTyzq1U9OrgzpT5oRGjBy4leEbJN0JIwBWDqtVjAHHJciC07Dxt1Pj4C8hQl0G5ydLr~UKA__&Key-Pair-Id=APKAITQYWVEN757ZA4KQ") center center/contain no-repeat;
       color: #FFC907;
       padding: 100px 20px;
@@ -38,11 +37,11 @@
     }
     header h1,
     header p,
-    header .images     
-    position: relative;
+    header .images {
+      position: relative;
       z-index: 1;
     }
-    header h1 {"1 in 10 people are without clean water"}
+    header h1 {
       font-size: 3.5rem;
     }
     header p {
