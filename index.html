@@ -9,3 +9,261 @@
   <p>charity:water</p>
 </body>
 </html>
+
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Charity Water - Landing Page</title>
+  <link rel="icon" type="image/png" href="https://cdn-icons-png.flaticon.com/512/2913/2913465.png">
+  <style>
+    @import url('https://fonts.googleapis.com/css2?family=Proxima+Nova:wght@400;700&display=swap');
+
+    body {
+      margin: 0;
+      font-family: 'Proxima Nova', Arial, sans-serif;
+      color: #FFC907;
+      line-height: 1.6;
+      background: #1A1A1A;
+      box-sizing: border-box;
+    }
+    header {
+      background: url("https://cdn2.dropmarkusercontent.com/52043/8cb1ff9d4927ebc0544db0f7a34bedb8104bf1257bedd8d94d3f4e45cbdc03a2/Madagascar_2019_CG-0318.jpg?Expires=1749873039&Signature=LSKetVy-tNtBhc7a2Vbm-L1f~Syba5SDI-POvl7T05~7laURQTN8Sb9xu-NbEhiDDwbb8syr8YlfbkNNce6dXSE2Tf9DAQwDwRgg-eVaZPXn3iW4OSMsI52LQ7GaBdGUcwDB~Uf~Ry157hZFOIQn9NMqKyZGHqoHIIZNI0gpylQPaKVzxrTkg1Vr-uO1tM7KOotECOkaRMiFo857l7G6VVSUbf9-5p0PS5X0QS5qQ0Msu6AgyZd2fGa1xXudXfHyy8HK-CGkGauiW~wSTyzq1U9OrgzpT5oRGjBy4leEbJN0JIwBWDqtVjAHHJciC07Dxt1Pj4C8hQl0G5ydLr~UKA__&Key-Pair-Id=APKAITQYWVEN757ZA4KQ") center center/contain no-repeat;
+      color: #FFC907;
+      padding: 100px 20px;
+      text-align: center;
+      position: relative;
+      min-height: 50vh;
+      display: flex;
+      flex-direction: column;
+      justify-content: center;
+      box-sizing: border-box;
+    }
+    header::after {
+      content: "";
+      position: absolute;
+      inset: 0;
+      background: url("https://cdn2.dropmarkusercontent.com/52043/8cb1ff9d4927ebc0544db0f7a34bedb8104bf1257bedd8d94d3f4e45cbdc03a2/Madagascar_2019_CG-0318.jpg?Expires=1749873039&Signature=LSKetVy-tNtBhc7a2Vbm-L1f~Syba5SDI-POvl7T05~7laURQTN8Sb9xu-NbEhiDDwbb8syr8YlfbkNNce6dXSE2Tf9DAQwDwRgg-eVaZPXn3iW4OSMsI52LQ7GaBdGUcwDB~Uf~Ry157hZFOIQn9NMqKyZGHqoHIIZNI0gpylQPaKVzxrTkg1Vr-uO1tM7KOotECOkaRMiFo857l7G6VVSUbf9-5p0PS5X0QS5qQ0Msu6AgyZd2fGa1xXudXfHyy8HK-CGkGauiW~wSTyzq1U9OrgzpT5oRGjBy4leEbJN0JIwBWDqtVjAHHJciC07Dxt1Pj4C8hQl0G5ydLr~UKA__&Key-Pair-Id=APKAITQYWVEN757ZA4KQ") center center/contain no-repeat;
+      z-index: 0;
+    }
+    header h1,
+    header p,
+    header .images {
+      position: relative;
+      z-index: 1;
+    }
+    header h1 {
+      font-size: 3.5rem;
+    }
+    header p {
+      font-size: 1.2rem;
+    }
+    header .images {
+      margin-top: 20px;
+      display: flex;
+      justify-content: space-between;
+      gap: 15px;
+      position: relative;
+      z-index: 1;
+      flex-wrap: wrap;
+    }
+    header .images img {
+      width: 350px;
+      height: auto;
+      border-radius: 8px;
+      max-width: 100%;
+    }
+    .impact-stories {
+      background: #77A8BB;
+      padding: 50px 20px;
+    }
+    .impact-stories h2 {
+      text-align: center;
+      margin-bottom: 30px;
+      font-size: 2.2rem;
+    }
+    .story {
+      max-width: 900px;
+      margin: 0 auto 30px;
+    }
+    .story img {
+      width: 100%;
+      border-radius: 10px;
+      max-width: 100%;
+      height: auto;
+    }
+    .story p {
+      margin-top: 15px;
+      font-size: 1.1rem;
+    }
+    .donate {
+      background: #33477D;
+      color: #FFF7E1;
+      text-align: center;
+      padding: 50px 20px;
+    }
+    .donate h2 {
+      margin-bottom: 20px;
+      font-size: 2rem;
+    }
+    .amounts button {
+      background: #FFC907;
+      border: none;
+      padding: 12px 20px;
+      margin: 5px;
+      cursor: pointer;
+      border-radius: 5px;
+      font-weight: bold;
+      font-size: 1.1rem;
+    }
+    .money-action {
+      background: #1A1A1A;
+      padding: 50px 20px;
+      text-align: center;
+    }
+    .money-action h2 {
+      margin-bottom: 30px;
+      font-size: 2.2rem;
+    }
+    .money-action img {
+      width: 100%;
+      max-width: 300px;
+      margin: 10px;
+      border-radius: 10px;
+      height: auto;
+    }
+    .map {
+      background: #FFF7E1;
+      color: #1A1A1A;
+      padding: 60px 20px;
+      text-align: center;
+    }
+    .map h2 {
+      font-size: 2.2rem;
+      margin-bottom: 20px;
+    }
+    .map img {
+      width: 100%;
+      max-width: 800px;
+      border-radius: 8px;
+      height: auto;
+    }
+    .map p {
+      margin-top: 15px;
+      font-size: 1.1rem;
+    }
+    footer {
+      background: #1A1A1A;
+      color: #FFF7E1;
+      text-align: center;
+      padding: 10px;
+      font-size: 0.9rem;
+    }
+    /* Responsive styles */
+    @media (max-width: 900px) {
+      header h1 {
+        font-size: 2.2rem;
+      }
+      .impact-stories, .money-action, .donate, .map {
+        padding: 30px 8px;
+      }
+      .money-action img, .map img {
+        max-width: 100%;
+      }
+    }
+    @media (max-width: 600px) {
+      header {
+        padding: 40px 5px;
+      }
+      header h1 {
+        font-size: 1.2rem;
+      }
+      .images {
+        flex-direction: column;
+        gap: 10px;
+        align-items: center;
+      }
+      .images img {
+        width: 100%;
+        max-width: 320px;
+      }
+      .impact-stories, .money-action, .donate, .map {
+        padding: 15px 3px;
+      }
+      .money-action img, .map img {
+        max-width: 100%;
+        margin: 6px 0;
+      }
+      .donate h2, .impact-stories h2, .money-action h2, .map h2 {
+        font-size: 1.1rem;
+      }
+      .amounts button {
+        width: 100%;
+        margin: 5px 0;
+        font-size: 1rem;
+        padding: 10px 0;
+      }
+    }
+  </style>
+</head>
+<body>
+
+  <header>
+    <h1><b>1 in 10 people are without clean water</b></h1>
+    <p style="color:#FFC907; font-size:1.5rem; margin: 10px 0 0 0;"><b>1 in 10 people are without clean water</b></p>
+    <p>You can provide clean water sources for communities in need</p>
+    <div class="images">
+    </div>
+  </header>
+
+  <section class="impact-stories">
+    <h2>Impact Stories</h2>
+
+    <div class="story">
+      <p><strong><a href="https://medium.com/charity-water/umus-story-99e7f6ce7a0e" target="_blank" style="color:inherit;text-decoration:underline;">Meet Umu</a></strong> — <b>Thanks to</b> a solar-powered water system funded by <b>charity: water</b>, Umu Bouare no longer spends hours collecting unsafe water—instead, she runs her own hair business and teaches hygiene in her village. Her story shows how one donation can create lasting impact through clean water, economic empowerment, and community health.</p>
+    </div>
+
+    <div class="story">
+    
+      <p><strong><a href="https://www.charitywater.org/stories/the-15-year-old-president" target="_blank" style="color:inherit;text-decoration:underline;">Meet Natalia</a></strong> — <b>At just 15</b>, Natalia became the President of her village’s water committee in Mozambique — a role made possible by access to clean water funded by charity: water donors. Once burdened by daily water collection, she now attends school full-time and leads her community with pride and purpose.</p>
+    </div>
+  </section>
+
+  <section class="donate">
+    <h2>Choose an amount to give</h2>
+    <div
+    <div
+    >  <form style="margin-top:20px;">
+      <label for="enter-amount" style="color:#fff;">enter a custom donation:</label>
+      <input type="number" id="custom-amount" name="custom-amount" min="1" placeholder="USD" style="margin:0 10px;">
+      <label for="email" style="color:#fff;">Email:</label>
+      <input type="email" id="email" name="email" placeholder="you@example.com" required>
+      <button type="submit" style="background:#FFC907;color:#33477D;">Donate</button>
+    </form>
+    <p></p>
+    <p>No donation is too small to start the ripple of opportunity for communities in need<br/>
+    100% of donations go directly to water projects</p>
+  </section>
+
+  <section class="money-action">
+    <h2><b>Your Money in Action</h2></b>
+    <img src="https://cdn2.dropmarkusercontent.com/52043/1b90606fe869585aa4a73fef2d582743544c85398f725fd9457aacb60006aa32/0207_Ethiopia_2019_CG-.jpg?Expires=1749872434&Signature=dr~dPfst-DxziEuNUWAc-TURw~9Z6TS61v5uMDDHA~-tNgaxhwFOuA-cX4monN6LsLHHeTpibNf6gIoWIAWB-qTokScrsLxqdR-ODChzzDhic4txOAYJQOzejr7BufcoubLkayD680M8d44eo8OpJzPAUm1wTuRx0EFH8a9~a~c4ZWmpFbs0jeKKdkaQdjyLYHopzybLQd89JVRn064dUh96mT-QAZcO4oJqlL8ds7WkVU6rD4Nxk3iO~fUZVIIXBeycwrVH~MCkRHxpbT6vY~OD3kA2bky5Z-CLQLIxWcsB7BAOH~3enjzDlFCE7eVVMfDLM2N~tOKA~GdtS3ZeuQ__&Key-Pair-Id=APKAITQYWVEN757ZA4KQ" alt="Well Construction">
+    <img src="https://cdn2.dropmarkusercontent.com/52043/e5efc3710d2d1c095c203bec9f7c4ba3ae2e6c1ea3573e8b9637ca55a48705cf/Malawi_2023_CG-0634.jpg?Expires=1749872744&Signature=JrJGAZpIy7JqlaqMIvgTswZEDQ~3g7~DWAyshWgdvZ1FI1ppNPHabxa30mP89YqxjoSohti96U~Kmb0KNd8o4CbxNT1AG5mnrHX9nWTth-atZI7TtubD7fBnk5fpDARWzdxOFUe5DsbXCn4ftDQTFqyEja8M0BVIf232e~4ackKDXDasSBHj9VVUG4MMh-nYgoN4G9Flo1Yh1W5bNwhjUVYDVA0Z6PUN8lDE1SWYVxoeKJr0jDlKc866fidYuUQyZ3B17K401q7BV2Kb7QiAjdSQDVYLjHgzVFBOKoPLPjf1cMewgfCv~E0kfSeYiwOO7a4G7kYQPiST38hxDSHr7g__&Key-Pair-Id=APKAITQYWVEN757ZA4KQ" alt="Happy Family">
+    <img src="https://cdn2.dropmarkusercontent.com/52043/d910e28c564617bfe51ca82a2cc7e15c94a0675c19b954d5af224ceb63909725/JS_20170803_2360.jpg?Expires=1749872665&Signature=LuPtjpvGcDfuuZbvrqico0hC9ZFR~VBOyvxpBF7Tz43XhCdgGywk~i15GSfzVFhdsQi9lV~Lvup8hocFqyQqAsvK57vqWdgVdwKVra9oD3gq1X4QVHmilCHJp-zBUyz2DeXbjTRShpAJaVHA4oAKOJ90xnQgqgTTQg8njve0RcnH4Iu5q4s0jVIKEfqxdX~yRbv6F5H3hxwgd31ZJfbLbzNLZN1a0ASU-IAoNzkNxNElgfmvRSYNM9tIei41wvskELEXsgF8lHfIXnqtVe3WMOfS-Hl4JzypJYfA4MukZk33qWfZd061e8JzEAJUH0t~8BsDq4htG~pCBUZoMKKeTA__&Key-Pair-Id=APKAITQYWVEN757ZA4KQ" alt="Water Improvement">
+  </section>
+
+  <section class="map">
+    <h2>
+      <a href="https://www.charitywater.org/?utm_source=adwords&utm_medium=paid-ppc&utm_campaign=donor-acq-usrow&utm_term=cBC_CW_G_PAID_PMAX_ALL_US+ROW_EVERGREEN&utm_content=performance_max&gad_source=1&gad_campaignid=21335452962&gbraid=0AAAAADNj5D_EkMhkbetekqN2-IX1ME03X&gclid=Cj0KCQjwmK_CBhCEARIsAMKwcD6Mt-Lz1Zijf8cYG0_GwadPUluRr2aVEN3LX6f9cPivuQR6bpgYzlQaArtUEALw_wcB" target="_blank" style="color:inherit;text-decoration:underline;">
+        See Our Global Impact
+      </a>
+    </h2>
+    <img src="https://cdn2.dropmarkusercontent.com/52043/f81168d9415e7b585a5958b8776c7a283e3a3f271d33d4b5690fe11698cdf9e9/5619_Ethiopia_2019_CG-.jpg?Expires=1749872479&Signature=k1zZXo4A3mbnkiO1TNRXjPY8CbH6q1rrM7oKL50h9XCrmoVI2n~MR73LLd5esdRh9oIOlPcaCDrtFnPULqEykPVpyoFjbSoNiUQXN7oF9qxx4weB-nNSVCMwO25WkOFGY3t5-gP07BzRduRRrt0qZlcYUEERD04UwzdTH8MA8Vpl7VaHN5mIcPcjueGBseAZYe8GekGPNWHiw9muBCbJ6h7bNoO5aLGfG4Rxkk2SOKgrS3mzYuRm~CIXOEyHCXX5p09kOJoK8Wz8YVzNKawMguUVPKfone2vX0jF6d1BsBzwmVsadoX1wswM~ujwzCuYkOMezTTX9ydzs9M6ZJP-8w__&Key-Pair-Id=APKAITQYWVEN757ZA4KQ" alt="Kid in Class">
+    <p>20,297,336 people served • 186,000 water projects • 29 countries</p>
+  </section>
+
+  <footer>
+    &copy; 2025 charity: water | All rights reserved
+  </footer>
+
+</body>
