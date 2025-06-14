@@ -144,7 +144,7 @@
     }
     footer {
       background: #1A1A1A;
-      color: #fff;
+      color: #FFF7E1;
       text-align: center;
       padding: 10px;
       font-size: 0.9rem;
